@@ -1,0 +1,6 @@
+namePrefix: dev-
+namespace: dev
+commonLabels:
+  environment: development
+resources:
+- ../../base

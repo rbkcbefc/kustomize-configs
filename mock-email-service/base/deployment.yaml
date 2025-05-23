@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: mock-email-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mock-email-service
+  template:
+    metadata:
+      labels:
+        app: mock-email-service
+    spec:
+      containers:
+      - name: mock-email-service
+        image: "rbkcbefc/mock-email-service:latest"
+        ports:
+        - containerPort: 8080
